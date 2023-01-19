@@ -42,11 +42,11 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btn_see_detail"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_margin="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_round_zoom_out" />
+        app:srcCompat="@drawable/ic_shape_zoom" />
 </androidx.constraintlayout.widget.ConstraintLayout>

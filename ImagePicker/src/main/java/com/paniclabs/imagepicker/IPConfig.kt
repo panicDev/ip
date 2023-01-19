@@ -5,10 +5,11 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import com.paniclabs.imagepicker.adapter.image.ImageAdapter
+import com.paniclabs.imagepicker.adapter.image.impl.GlideAdapter
 import com.paniclabs.imagepicker.util.getDimension
 
 object IPConfig {
-    lateinit var imageAdapter: ImageAdapter
+    var imageAdapter: ImageAdapter = GlideAdapter()
     var currentPickerImageList: List<Uri> = emptyList()
 
     //BaseParams
@@ -82,9 +83,9 @@ object IPConfig {
         isAutomaticClose = false
         hasButtonInAlbumActivity = false
 
-        colorActionBar = Color.parseColor("#3F51B5")
+        colorActionBar = Color.parseColor("#E85350")
         colorActionBarTitle = Color.parseColor("#ffffff")
-        colorStatusBar = Color.parseColor("#303F9F")
+        colorStatusBar = Color.parseColor("#FFB22C2B")
 
         isStatusBarLight = false
         hasCameraInPickerPage = false

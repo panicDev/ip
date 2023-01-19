@@ -89,12 +89,6 @@ class WithActivityActivity : AppCompatActivity() {
                         .setMaxCount(5)
                         .setMinCount(3)
                         .setPickerSpanCount(3)
-                        .setActionBarColor(
-                            Color.parseColor("#795548"),
-                            Color.parseColor("#5D4037"),
-                            false
-                        )
-                        .setActionBarTitleColor(Color.parseColor("#ffffff"))
                         .setSelectedImages(path)
                         .setIsUseDetailView(false)
                         .setAlbumSpanCount(2, 3)
@@ -125,11 +119,6 @@ class WithActivityActivity : AppCompatActivity() {
                         .setImageAdapter(GlideAdapter())
                         .setMaxCount(50)
                         .setPickerSpanCount(4)
-                        .setActionBarColor(
-                            Color.parseColor("#ffffff"),
-                            Color.parseColor("#ffffff"),
-                            true
-                        )
                         .setActionBarTitleColor(Color.parseColor("#000000"))
                         .setSelectedImages(path)
                         .setAlbumSpanCount(1, 2)

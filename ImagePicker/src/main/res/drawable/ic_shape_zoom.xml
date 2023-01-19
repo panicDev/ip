@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (c) 2015 - 2022  PergiKuliner - All Rights Reserved
+     All information contained herein is and remains the property of PergiKuliner.
+     Unauthorized copying of this file, via any medium, is strictly prohibited unless prior
+     written permission is obtained from PergiKuliner.
+
+     Musthofa Ali Ubaid - panic.inc.dev@gmail.com
+
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#80000000" />
+
+            <size
+                android:width="24dp"
+                android:height="24dp" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="10dp"
+        android:drawable="@drawable/ic_round_zoom_out"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" />
+
+</layer-list>

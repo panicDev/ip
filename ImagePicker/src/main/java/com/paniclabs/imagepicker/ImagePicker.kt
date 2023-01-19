@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.activity.result.ActivityResultLauncher
 import androidx.fragment.app.Fragment
 import com.paniclabs.imagepicker.adapter.image.ImageAdapter
+import com.paniclabs.imagepicker.adapter.image.impl.GlideAdapter
 import java.lang.ref.WeakReference
 
 class ImagePicker private constructor(activity: Activity?, fragment: Fragment?) {
@@ -15,7 +16,7 @@ class ImagePicker private constructor(activity: Activity?, fragment: Fragment?) 
 
     val ipContext: IpContext get() = IpContext()
 
-    fun setImageAdapter(imageAdapter: ImageAdapter): ImagePickerCreator {
+    fun setImageAdapter(imageAdapter: ImageAdapter = GlideAdapter()): ImagePickerCreator {
         val config = IPConfig.apply {
             refresh()
             this.imageAdapter = imageAdapter
