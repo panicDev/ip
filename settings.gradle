@@ -1,8 +1,0 @@
-include ':ImagePickerDemo', ':ImagePicker'
-
-gradle.ext.versionCode = 36
-gradle.ext.versionName = '1.1.0'
-
-gradle.ext.set('minSdk', 15)
-gradle.ext.set('targetSdk', 33)
-gradle.ext.set('compileSdk', 33)

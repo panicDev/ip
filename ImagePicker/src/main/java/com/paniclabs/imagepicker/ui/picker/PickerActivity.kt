@@ -302,7 +302,9 @@ class PickerActivity : BaseActivity(),
     }
 
     override fun takePicture(saveDir: String) {
-        cameraUtil.takePicture(this, saveDir, TAKE_A_PICTURE_REQUEST_CODE)
+        if (checkCameraPermission()) {
+            cameraUtil.takePicture(this, saveDir, TAKE_A_PICTURE_REQUEST_CODE)
+        }
     }
 
     override fun showImageList(

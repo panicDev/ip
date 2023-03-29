@@ -89,6 +89,12 @@ class WithActivityActivity : AppCompatActivity() {
                         .setMaxCount(5)
                         .setMinCount(3)
                         .setPickerSpanCount(3)
+                        .setActionBarColor(
+                            Color.parseColor("#E85350"),
+                            Color.parseColor("#E85350"),
+                            false
+                        )
+                        .setActionBarTitleColor(Color.parseColor("#ffffff"))
                         .setSelectedImages(path)
                         .setIsUseDetailView(false)
                         .setAlbumSpanCount(2, 3)
