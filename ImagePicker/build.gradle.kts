@@ -8,7 +8,7 @@ object Maven {
     const val groupId = "id.panic_dev.android"
     const val artifactId = "ip"
     const val name = "image-picker"
-    const val version = "1.1"
+    const val version = "1.2"
     const val desc = "Image Picker"
     const val siteUrl = "https://github.com/panicDev/ip"
     const val gitUrl = "https://github.com/panicDev/ip.git"
@@ -74,9 +74,9 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.panicDev"
-                artifactId = "ip"
-                version = "1.1"
+                groupId = Maven.groupId
+                artifactId = Maven.artifactId
+                version = Maven.version
             }
 
         }

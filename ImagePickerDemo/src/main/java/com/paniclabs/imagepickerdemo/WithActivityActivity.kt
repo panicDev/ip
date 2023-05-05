@@ -117,7 +117,7 @@ class WithActivityActivity : AppCompatActivity() {
                         .setAllViewTitle("All")
                         .setActionBarTitle("FishBun Dark")
                         .textOnNothingSelected("Please select three or more!")
-                        .startAlbum()
+                        .startAlbumWithActivityResultCallback(startForResultCallback)
                 }
                 //Light
                 2 -> {
@@ -147,7 +147,7 @@ class WithActivityActivity : AppCompatActivity() {
                         .setActionBarTitle("FishBun Light")
                         .textOnImagesSelectionLimitReached("You can't select any more.")
                         .textOnNothingSelected("I need a photo!")
-                        .startAlbum()
+                        .startAlbumWithActivityResultCallback(startForResultCallback)
                 }
                 else -> {
                     finish()
