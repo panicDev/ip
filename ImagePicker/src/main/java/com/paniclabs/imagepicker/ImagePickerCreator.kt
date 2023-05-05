@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import com.paniclabs.imagepicker.ui.album.ui.AlbumActivity
 import com.paniclabs.imagepicker.ui.picker.PickerActivity
@@ -221,10 +222,13 @@ class ImagePickerCreator(private val imagePicker: ImagePicker, private val confi
 
     private fun getIntent(context: Context): Intent {
         return if (config.isAutomaticRunningCamera) {
+            println("isAutomaticRunningCamera true")
             PickerActivity.getPickerActivityIntent(context, 0L, config.titleAlbumAllView, 0)
         } else if (config.isStartInAllView) {
+            println("isAutomaticRunningCamera false isStartInAllView")
             PickerActivity.getPickerActivityIntent(context, 0L, config.titleAlbumAllView, 0)
         } else {
+            println("isAutomaticRunningCamera false AlbumActivity")
             Intent(context, AlbumActivity::class.java)
         }
     }

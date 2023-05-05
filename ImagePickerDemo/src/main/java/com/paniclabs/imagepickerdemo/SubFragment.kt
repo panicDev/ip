@@ -52,6 +52,23 @@ class SubFragment : Fragment() {
             adapter = imageAdapter
         }
 
+        binding.btnAddImagesCameraOnly.setOnClickListener {
+            ImagePicker.with(requireActivity())
+                .setImageAdapter(GlideAdapter())
+                .setMaxCount(10)
+                .setActionBarColor(Color.parseColor("#E85350"), Color.parseColor("#303F9F"))
+                .setSelectedImages(path)
+                .pickCameraOnly(true)
+                .startAlbumWithActivityResultCallback(startForResult)
+//            ImagePicker.with(this@SubFragment)
+//                .setImageAdapter(GlideAdapter())
+//                .setMaxCount(10)
+//                .setActionBarColor(Color.parseColor("#E85350"), Color.parseColor("#303F9F"))
+//                .setSelectedImages(path)
+//                .hasCameraInPickerPage(true)
+//                .startAlbumWithActivityResultCallback(startForResult)
+        }
+
         binding.btnAddImages.setOnClickListener {
             ImagePicker.with(this@SubFragment)
                 .setImageAdapter(GlideAdapter())
