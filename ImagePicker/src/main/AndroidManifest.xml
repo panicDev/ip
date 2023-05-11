@@ -4,7 +4,7 @@
     <application>
         <provider
             android:name="com.paniclabs.imagepicker.ImagePickerFileProvider"
-            android:authorities="${applicationId}.provider"
+            android:authorities="${applicationId}.ip.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

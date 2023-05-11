@@ -1,6 +1,7 @@
 package com.paniclabs.imagepicker.ui.album.mvp
 
 import android.net.Uri
+import android.util.Log
 import com.paniclabs.imagepicker.ui.album.model.Album
 import com.paniclabs.imagepicker.ui.album.model.repository.AlbumRepository
 import com.paniclabs.imagepicker.ui.album.AlbumContract
@@ -43,6 +44,7 @@ class AlbumPresenter(
 
     override fun takePicture() {
         albumRepository.getDefaultSavePath()?.let {
+            Log.w("ImPick", "getDefaultSavePath $it")
             albumView.takePicture(it)
         }
     }
@@ -99,6 +101,7 @@ class AlbumPresenter(
             selectedCount < albumRepository.getMinCount() -> {
                 albumView.showMinimumImageMessage(albumRepository.getMinCount())
             }
+
             else -> {
                 finish()
             }
