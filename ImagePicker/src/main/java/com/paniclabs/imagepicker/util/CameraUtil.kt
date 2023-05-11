@@ -36,7 +36,7 @@ class CameraUtil {
                 val uri: Uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     FileProvider.getUriForFile(
                         activity,
-                        activity.applicationContext.packageName + ".provider",
+                        activity.applicationContext.packageName + ".ip.provider",
                         photoFile
                     )
                 } else {
@@ -53,7 +53,7 @@ class CameraUtil {
         val values = ContentValues()
         values.put(MediaStore.MediaColumns.DISPLAY_NAME, file.name)
         values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpg")
-        values.put(MediaStore.Audio.Media.IS_PENDING, 1)
+        values.put(MediaStore.Images.Media.IS_PENDING, 1)
 
         contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)?.let {
             contentResolver.openFileDescriptor(it, "w").use { parcelFileDescriptor ->
