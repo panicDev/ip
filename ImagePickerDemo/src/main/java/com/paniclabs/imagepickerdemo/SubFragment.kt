@@ -73,6 +73,7 @@ class SubFragment : Fragment() {
             ImagePicker.with(this@SubFragment)
                 .setImageAdapter(GlideAdapter())
                 .setMaxCount(10)
+                .isStartInAllView()
                 .setActionBarColor(Color.parseColor("#E85350"), Color.parseColor("#303F9F"))
                 .setSelectedImages(path)
                 .hasCameraInPickerPage(true)

@@ -224,10 +224,7 @@ class ImagePickerCreator(private val imagePicker: ImagePicker, private val confi
         return if (config.isAutomaticRunningCamera) {
             println("isAutomaticRunningCamera true")
             PickerActivity.getPickerActivityIntent(context, 0L, config.titleAlbumAllView, 0)
-        } else if (config.isStartInAllView) {
-            println("isAutomaticRunningCamera false isStartInAllView")
-            PickerActivity.getPickerActivityIntent(context, 0L, config.titleAlbumAllView, 0)
-        } else {
+        }  else {
             println("isAutomaticRunningCamera false AlbumActivity")
             Intent(context, AlbumActivity::class.java)
         }
